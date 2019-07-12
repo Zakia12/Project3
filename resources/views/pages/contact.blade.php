@@ -5,7 +5,7 @@
         <div class="card-title"><h1>Contact</h1>
             <p class="lead">Please use this form to contact the site owner.</p>
 
-            <form action="/contact" method="post">
+            <form action="/contact" method="post" action="{{route('contact.store')}}">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Name</label>

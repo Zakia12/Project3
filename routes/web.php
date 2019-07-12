@@ -14,9 +14,5 @@
 Route::get('/', 'PagesController@home')->name('index');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name ('contact');
-Route::post('/contact', function () {
-    $data = request()->all();
-    echo "Thank You: " . $data['name']. '<br>';
-    echo "Email: " . $data['email']. '<br>';
-    echo "Message: " . $data['body'];
-});
+Route::post('/contact','PagesController@store')->name ('contact.store');
+Route::get('/thanks/{name}', 'PagesController@thanks')->name ('thanks');
